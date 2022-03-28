@@ -81,6 +81,8 @@
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <EnableClangTidyCodeAnalysis>true</EnableClangTidyCodeAnalysis>
     <CodeAnalysisRuleSet>MixedRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <IntDir>.\portingFirmare</IntDir>
+    <ExternalIncludePath>C:\Project\Arduino_Porting_Stm32\Arduino_Porting_Stm32\portingFirmare;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -115,10 +117,11 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4996 </DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,6 +146,33 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arduino_Porting_Stm32.cpp" />
+    <ClCompile Include="portingFirmare\Arduino.cpp" />
+    <ClCompile Include="portingFirmare\avr\dtostrf.c" />
+    <ClCompile Include="portingFirmare\HardwareSerial.cpp" />
+    <ClCompile Include="portingFirmare\itoa.c" />
+    <ClCompile Include="portingFirmare\Platform.cpp" />
+    <ClCompile Include="portingFirmare\Platform_HardwareSerial.cpp" />
+    <ClCompile Include="portingFirmare\Print.cpp" />
+    <ClCompile Include="portingFirmare\SPI\SPI.cpp" />
+    <ClCompile Include="portingFirmare\SPI\utility\spi_com.c" />
+    <ClCompile Include="portingFirmare\Stream.cpp" />
+    <ClCompile Include="portingFirmare\WString.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="portingFirmare\Arduino.hpp" />
+    <ClInclude Include="portingFirmare\avr\dtostrf.h" />
+    <ClInclude Include="portingFirmare\avr\pgmspace.h" />
+    <ClInclude Include="portingFirmare\Binary.hpp" />
+    <ClInclude Include="portingFirmare\HardwareSerial.h" />
+    <ClInclude Include="portingFirmare\itoa.h" />
+    <ClInclude Include="portingFirmare\Platform.hpp" />
+    <ClInclude Include="portingFirmare\Platform_HardwareSerial.h" />
+    <ClInclude Include="portingFirmare\Print.h" />
+    <ClInclude Include="portingFirmare\Printable.h" />
+    <ClInclude Include="portingFirmare\SPI\SPI.h" />
+    <ClInclude Include="portingFirmare\SPI\utility\spi_com.h" />
+    <ClInclude Include="portingFirmare\Stream.h" />
+    <ClInclude Include="portingFirmare\WString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

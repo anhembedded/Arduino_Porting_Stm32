@@ -15,4 +15,5 @@ add_executable(Arduino_Porting_Stm32
         portingFirmare/Binary.hpp
         portingFirmare/Platform.cpp
         portingFirmare/Platform.hpp
-        Arduino_Porting_Stm32.cpp)
+        Arduino_Porting_Stm32.cpp
+        portingFirmare)

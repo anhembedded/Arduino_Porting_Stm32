@@ -1,0 +1,8 @@
+# ninja log v5
+15	204	6701450655322538	CMakeFiles/Arduino_Porting_Stm32.dir/portingFirmare/avr/dtostrf.c.obj	6a8c9883f56b34a6
+5	789	6701549137287942	CMakeFiles/Arduino_Porting_Stm32.dir/portingFirmare/Arduino.cpp.obj	2769e7c29d9a35df
+18	792	6701549137287942	CMakeFiles/Arduino_Porting_Stm32.dir/portingFirmare/Platform.cpp.obj	e25b3e728d559175
+5	509	6701551875579703	CMakeFiles/Arduino_Porting_Stm32.dir/Arduino_Porting_Stm32.cpp.obj	7cb6060b0faf9b08
+793	1068	6701549140074851	Arduino_Porting_Stm32.exe	649070b6dc2580ce
+8	853	6701552800812062	CMakeFiles/Arduino_Porting_Stm32.dir/Arduino_Porting_Stm32.cpp.obj	7cb6060b0faf9b08
+4	702	6701553436181505	CMakeFiles/Arduino_Porting_Stm32.dir/Arduino_Porting_Stm32.cpp.obj	7cb6060b0faf9b08

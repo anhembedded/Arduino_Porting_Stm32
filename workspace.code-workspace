@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\Users\\hoang\\.platformio\\packages\\framework-arduinoststm32"
+		},
+		{
+			"path": "."
+		},
+		{
+			"name": "UnoStm32",
+			"path": "..\\..\\..\\Users\\hoang\\OneDrive\\Documents\\PlatformIO\\Projects\\UnoStm32"
+		},
+		{
+			"path": "..\\..\\RC522"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"xiosbase": "c"
+		}
+	}
+}

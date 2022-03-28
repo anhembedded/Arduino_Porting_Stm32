@@ -1,0 +1,3 @@
+C:/Project/Arduino_Porting_Stm32/Arduino_Porting_Stm32/cmake-build-debug/CMakeFiles/Arduino_Porting_Stm32.dir
+C:/Project/Arduino_Porting_Stm32/Arduino_Porting_Stm32/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Project/Arduino_Porting_Stm32/Arduino_Porting_Stm32/cmake-build-debug/CMakeFiles/rebuild_cache.dir

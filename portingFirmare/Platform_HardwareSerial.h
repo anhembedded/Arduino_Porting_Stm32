@@ -8,6 +8,8 @@
 class Platform_HardwareSerial : public HardwareSerial
 {
 public:
+   
+    size_t write(uint8_t data) override;
     void begin(unsigned long baud) override;
     void end() override;
     int available(void) override;
@@ -15,8 +17,8 @@ public:
     virtual int read(void) override;
     int availableForWrite(void) override;
     void flush(void) override;
-    size_t write(uint8_t data) override;
-};
 
-extern Platform_HardwareSerial Serial; 
+};
+extern Platform_HardwareSerial Serial;
+
 #endif // __PLATFORM_HARDWARESERIAL_H__

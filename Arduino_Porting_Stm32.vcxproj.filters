@@ -13,10 +13,99 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Firmware">
+      <UniqueIdentifier>{f3c0b0ec-1453-436e-a8bd-b86c39d197f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Firmware\avr">
+      <UniqueIdentifier>{9660f967-a757-42bd-8f8d-7c9e74030b2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Firmware\SPI">
+      <UniqueIdentifier>{aa2a523b-99dc-48fa-88e3-b22bb37bbd44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Firmware\SPI\utility">
+      <UniqueIdentifier>{e785a581-a18b-4e02-af3c-39c28df24741}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Arduino_Porting_Stm32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="portingFirmare\Platform.cpp">
+      <Filter>Firmware</Filter>
+    </ClCompile>
+    <ClCompile Include="portingFirmare\Arduino.cpp">
+      <Filter>Firmware</Filter>
+    </ClCompile>
+    <ClCompile Include="portingFirmare\avr\dtostrf.c">
+      <Filter>Firmware\avr</Filter>
+    </ClCompile>
+    <ClCompile Include="portingFirmare\HardwareSerial.cpp">
+      <Filter>Firmware</Filter>
+    </ClCompile>
+    <ClCompile Include="portingFirmare\Stream.cpp">
+      <Filter>Firmware</Filter>
+    </ClCompile>
+    <ClCompile Include="portingFirmare\Print.cpp">
+      <Filter>Firmware</Filter>
+    </ClCompile>
+    <ClCompile Include="portingFirmare\WString.cpp">
+      <Filter>Firmware</Filter>
+    </ClCompile>
+    <ClCompile Include="portingFirmare\itoa.c">
+      <Filter>Firmware</Filter>
+    </ClCompile>
+    <ClCompile Include="portingFirmare\Platform_HardwareSerial.cpp">
+      <Filter>Firmware</Filter>
+    </ClCompile>
+    <ClCompile Include="portingFirmare\SPI\SPI.cpp">
+      <Filter>Firmware\SPI</Filter>
+    </ClCompile>
+    <ClCompile Include="portingFirmare\SPI\utility\spi_com.c">
+      <Filter>Firmware\SPI\utility</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="portingFirmare\Platform.hpp">
+      <Filter>Firmware</Filter>
+    </ClInclude>
+    <ClInclude Include="portingFirmare\Arduino.hpp">
+      <Filter>Firmware</Filter>
+    </ClInclude>
+    <ClInclude Include="portingFirmare\Binary.hpp">
+      <Filter>Firmware</Filter>
+    </ClInclude>
+    <ClInclude Include="portingFirmare\avr\dtostrf.h">
+      <Filter>Firmware\avr</Filter>
+    </ClInclude>
+    <ClInclude Include="portingFirmare\avr\pgmspace.h">
+      <Filter>Firmware\avr</Filter>
+    </ClInclude>
+    <ClInclude Include="portingFirmare\HardwareSerial.h">
+      <Filter>Firmware</Filter>
+    </ClInclude>
+    <ClInclude Include="portingFirmare\Stream.h">
+      <Filter>Firmware</Filter>
+    </ClInclude>
+    <ClInclude Include="portingFirmare\Print.h">
+      <Filter>Firmware</Filter>
+    </ClInclude>
+    <ClInclude Include="portingFirmare\Printable.h">
+      <Filter>Firmware</Filter>
+    </ClInclude>
+    <ClInclude Include="portingFirmare\WString.h">
+      <Filter>Firmware</Filter>
+    </ClInclude>
+    <ClInclude Include="portingFirmare\itoa.h">
+      <Filter>Firmware</Filter>
+    </ClInclude>
+    <ClInclude Include="portingFirmare\Platform_HardwareSerial.h">
+      <Filter>Firmware</Filter>
+    </ClInclude>
+    <ClInclude Include="portingFirmare\SPI\SPI.h">
+      <Filter>Firmware\SPI</Filter>
+    </ClInclude>
+    <ClInclude Include="portingFirmare\SPI\utility\spi_com.h">
+      <Filter>Firmware\SPI\utility</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

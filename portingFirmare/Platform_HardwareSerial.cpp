@@ -42,9 +42,12 @@ void Platform_HardwareSerial::flush(void)
     std::cout << "flush !!! " << std::endl;
 }
 
+
 size_t Platform_HardwareSerial::write(uint8_t data)
 {
     std::cout << data;
     return 1;
 }
+
+
 Platform_HardwareSerial Serial;
