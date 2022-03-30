@@ -25,6 +25,9 @@
     <Filter Include="Firmware\SPI\utility">
       <UniqueIdentifier>{e785a581-a18b-4e02-af3c-39c28df24741}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Firmware\wire">
+      <UniqueIdentifier>{e94ce155-8078-499d-91ae-ed43d40edb58}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Arduino_Porting_Stm32.cpp">
@@ -62,6 +65,9 @@
     </ClCompile>
     <ClCompile Include="portingFirmare\SPI\utility\spi_com.c">
       <Filter>Firmware\SPI\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="portingFirmare\Wire\Wire.cpp">
+      <Filter>Firmware\wire</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +112,9 @@
     </ClInclude>
     <ClInclude Include="portingFirmare\SPI\utility\spi_com.h">
       <Filter>Firmware\SPI\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="portingFirmare\Wire\Wire.h">
+      <Filter>Firmware\wire</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

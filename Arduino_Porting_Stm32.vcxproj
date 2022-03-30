@@ -122,6 +122,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <DisableSpecificWarnings>4996 </DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>C:\Project\Arduino_Porting_Stm32\Arduino_Porting_Stm32\portingFirmare\Arduino_.b81e58c6.tlog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -156,6 +157,7 @@
     <ClCompile Include="portingFirmare\SPI\SPI.cpp" />
     <ClCompile Include="portingFirmare\SPI\utility\spi_com.c" />
     <ClCompile Include="portingFirmare\Stream.cpp" />
+    <ClCompile Include="portingFirmare\Wire\Wire.cpp" />
     <ClCompile Include="portingFirmare\WString.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -172,6 +174,7 @@
     <ClInclude Include="portingFirmare\SPI\SPI.h" />
     <ClInclude Include="portingFirmare\SPI\utility\spi_com.h" />
     <ClInclude Include="portingFirmare\Stream.h" />
+    <ClInclude Include="portingFirmare\Wire\Wire.h" />
     <ClInclude Include="portingFirmare\WString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

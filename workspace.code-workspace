@@ -12,6 +12,9 @@
 		},
 		{
 			"path": "..\\..\\RC522"
+		},
+		{
+			"path": "..\\..\\..\\Users\\hoang\\OneDrive\\Documents\\PlatformIO\\Projects\\UnoStm32\\.pio\\libdeps\\black_f407ve"
 		}
 	],
 	"settings": {

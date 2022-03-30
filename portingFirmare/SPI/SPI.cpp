@@ -47,7 +47,7 @@ SPIClass::SPIClass()
   *         it gives the management of the CS pin to the SPI class. In this case
   *         do not manage the CS pin outside of the SPI class.
   */
-void SPIClass::begin(uint8_t _pin)
+void SPIClass::begin(PF_GPIO_T _pin)
 {
   
 
@@ -63,7 +63,7 @@ void SPIClass::begin(uint8_t _pin)
   *         CS pin used to the transfer() function and the SPI instance will be
   *         configured with the right settings.
   */
-void SPIClass::beginTransaction(PF_GPIO_T cspin, SPISettings settings)
+void SPIClass::beginTransaction(PF_GPIO_T cspin, uint16_t settings)
 {
  
 }
@@ -72,7 +72,7 @@ void SPIClass::beginTransaction(PF_GPIO_T cspin, SPISettings settings)
   * @brief  Remove the CS pin and the settings associated to the SPI instance.
   * @param  _pin: CS pin (optional)
   */
-void SPIClass::endTransaction(uint8_t _pin)
+void SPIClass::endTransaction(PF_GPIO_T _pin)
 {
   RemovePin(_pin);
 }
@@ -93,7 +93,7 @@ void SPIClass::end()
   * @param  _pin: CS pin associated to a configuration (optional).
   * @param  _bitOrder: MSBFIRST or LSBFIRST
   */
-void SPIClass::setBitOrder(uint8_t _pin, BitOrder _bitOrder)
+void SPIClass::setBitOrder(PF_GPIO_T _pin, BitOrder _bitOrder)
 {
  
 }
@@ -110,7 +110,7 @@ void SPIClass::setBitOrder(uint8_t _pin, BitOrder _bitOrder)
   *         SPI_MODE2             1                     0
   *         SPI_MODE3             1                     1
   */
-void SPIClass::setDataMode(uint8_t _pin, uint8_t _mode)
+void SPIClass::setDataMode(PF_GPIO_T _pin, uint8_t _mode)
 {
 
 
@@ -137,7 +137,7 @@ void SPIClass::setDataMode(uint8_t _pin, uint8_t _mode)
   * @param  _divider: the SPI clock can be divided by values from 1 to 255.
   *         If 0, default SPI speed is used.
   */
-void SPIClass::setClockDivider(uint8_t _pin, uint8_t _divider)
+void SPIClass::setClockDivider(PF_GPIO_T _pin, uint8_t _divider)
 {
   
 }
@@ -155,14 +155,15 @@ void SPIClass::setClockDivider(uint8_t _pin, uint8_t _divider)
   *         several CS pin.
   * @return byte received from the slave.
   */
-byte SPIClass::transfer(uint8_t _pin, uint8_t data, SPITransferMode _mode)
+byte SPIClass::transfer(PF_GPIO_T _pin, uint8_t data, SPITransferMode _mode)
 {
   uint8_t rx_buffer = 0;
 
 
   return rx_buffer;
 }
-
+void transfer(void* _bufout, void* _bufin, size_t _count, SPITransferMode _mode = SPI_LAST);
+void transfer(PF_GPIO_T _pin, void* _bufout, void* _bufin, size_t _count, SPITransferMode _mode);
 /**
   * @brief  Transfer two bytes on the SPI bus in 16 bits format.
   *         begin() or beginTransaction() must be called at least once before.
@@ -176,7 +177,7 @@ byte SPIClass::transfer(uint8_t _pin, uint8_t data, SPITransferMode _mode)
   *         several CS pin.
   * @return bytes received from the slave in 16 bits format.
   */
-uint16_t SPIClass::transfer16(uint8_t _pin, uint16_t data, SPITransferMode _mode)
+uint16_t SPIClass::transfer16(PF_GPIO_T _pin, uint16_t data, SPITransferMode _mode)
 {
   uint16_t rx_buffer = 0;
   uint16_t tmp;
@@ -200,7 +201,7 @@ uint16_t SPIClass::transfer16(uint8_t _pin, uint16_t data, SPITransferMode _mode
   *         That means the CS pin is not reset. Be careful in case you use
   *         several CS pin.
   */
-void SPIClass::transfer(uint8_t _pin, void *_buf, size_t _count, SPITransferMode _mode)
+void SPIClass::transfer(PF_GPIO_T _pin, void *_buf, size_t _count, SPITransferMode _mode)
 {
  
 }
@@ -220,7 +221,7 @@ void SPIClass::transfer(uint8_t _pin, void *_buf, size_t _count, SPITransferMode
   *         That means the CS pin is not reset. Be careful in case you use
   *         several CS pin.
   */
-void SPIClass::transfer(byte _pin, void *_bufout, void *_bufin, size_t _count, SPITransferMode _mode)
+void SPIClass::transfer(PF_GPIO_T _pin, void *_bufout, void *_bufin, size_t _count, SPITransferMode _mode)
 {
   
 }

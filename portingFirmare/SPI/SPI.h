@@ -92,6 +92,7 @@ protected:
      * attach with specific SPI settings.
      */
     void beginTransaction(PF_GPIO_T cspin);
+    void  beginTransaction(PF_GPIO_T cspin, uint16_t settings);
     void endTransaction(PF_GPIO_T cspin);
     void endTransaction(void)
     {
@@ -105,13 +106,15 @@ protected:
     byte transfer(PF_GPIO_T cspin, uint8_t _data, SPITransferMode _mode = SPI_LAST);
     uint16_t transfer16(PF_GPIO_T cspin, uint16_t _data, SPITransferMode _mode = SPI_LAST);
     void transfer(PF_GPIO_T cspin, void *_buf, size_t _count, SPITransferMode _mode = SPI_LAST);
-    void transfer(byte cspin, void *_bufout, void *_bufin, size_t _count, SPITransferMode _mode = SPI_LAST);
+    void transfer(PF_GPIO_T cspin, void *_bufout, void *_bufin, size_t _count, SPITransferMode _mode = SPI_LAST);
 
     // Transfer functions when user controls himself the CS pin.
+
     byte transfer(uint8_t _data, SPITransferMode _mode = SPI_LAST)
     {
       return transfer(cspin, _data, _mode);
     }
+    
 
     uint16_t transfer16(uint16_t _data, SPITransferMode _mode = SPI_LAST)
     {
@@ -168,7 +171,7 @@ protected:
       ADD_NEW_PIN = 1
     } pin_option_t;
 
-    void RemovePin(uint8_t _pin)
+    void RemovePin(PF_GPIO_T _pin)
     {
      
     }
